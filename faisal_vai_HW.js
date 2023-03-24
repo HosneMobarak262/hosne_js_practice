@@ -145,4 +145,18 @@ var max = findMax(ar);
 console.log("Max: ", max);
 console.log("");
 
+// Coding challenge #14: Print the first 10 Fibonacci numbers without recursion
 
+var fib0 = 0;
+var fib1 = 1;
+
+console.log("Fibonacci number 0 is: " + fib0);
+console.log("Fibonacci number 1 is: " + fib1);
+
+for(var i = 2; i < 10; i++){
+    var fibTemp = fib0 + fib1;
+    console.log("Fibonacci number " + i + " is: " + fibTemp);
+
+    fib0 = fib1;
+    fib1 = fibTemp;
+}

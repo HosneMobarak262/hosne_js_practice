@@ -380,3 +380,21 @@ function reverseString(s1){
     }
     return s2;
 }
+
+// Coding challenge #24: Create a function that will merge two arrays and return the result as a new array
+var array1 = [1,2,3,4];
+var array2 = [9,8,7,6];
+
+var array3 = mergeArray(array1, array2);
+console.log(array3);
+
+function mergeArray(array1, array2) {
+    var array3 = [];
+    for(let item of array1){
+        array3.push(item);
+    }
+    for (let item of array2){
+        array3.push(item);
+    }
+    return array3;
+}

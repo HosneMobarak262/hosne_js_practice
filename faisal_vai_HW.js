@@ -398,3 +398,42 @@ function mergeArray(array1, array2) {
     }
     return array3;
 }
+
+// Coding challenge #25: Create a function that will receive two arrays of numbers as arguments and return an array composed of all the numbers that are either in the first array or second array but not in both
+var array1 = [1,2,3,4,5,6];
+var array2 = [9,8,7,6,4];
+
+var array3 = mergeExclusiveArray(array1, array2);
+console.log(array3);
+
+function mergeExclusiveArray(array1, array2){
+    var array3 = [];
+    for(let item of array1){
+        if(!array2.includes(item)) {
+            array3.push(item);
+        }
+    }
+    for(let item of array2){
+        if(!array1.includes(item)){
+            array3.push(item);
+        }
+    }
+    return array3;
+}
+
+// Coding challenge #26: Create a function that will receive two arrays and will return an array with elements that are in the first array but not in the second
+var array1 = [1,2,3,4,5,6];
+var array2 = [9,8,7,6,4];
+
+var array3 = mergeLeft(array1, array2);
+console.log(array3);
+
+function mergeLeft(array1, array2){
+    var array3 = [];
+    for(let item of array1){
+        if (!array2.includes(item)){
+            array3.push(item);
+        }
+    }
+    return array3;
+}

@@ -340,3 +340,14 @@ function rotateArray(array1){
     var first = array1.shift();
     array1.push(first);
 }
+
+// Coding challenge #21: Rotate an array to the right 1 position
+var array1 = [1, 2, 3, 4, 5, 6];
+console.log(array1);
+rotateRight(array1);
+console.log(array1);
+
+function rotateRight(array1) {
+    var last = array1.pop();
+    array1.unshift(last);
+}

@@ -161,7 +161,7 @@ for(var i = 2; i < 10; i++){
     fib1 = fibTemp;
 }
 
-// Coding challenge #15: Create a function that will find the nth Fibonacci number using recursion
+// 15 Coding challenge #15: Create a function that will find the nth Fibonacci number using recursion
 
 function fibonacci(num){
     if(num == 0) {
@@ -173,3 +173,15 @@ function fibonacci(num){
     }
 }
 console.log(fibonacci(16));
+
+// 15 Fibonacci with Behold Binet’s Formula
+function fibonacciBinet(num) {
+    var sqrt5 = Math.sqrt(5);
+    var firstTerm = (1 + sqrt5) / 2;
+    var secondTerm = (1 - sqrt5) / 2;
+    return Math.round((Math.pow(firstTerm, num) - Math.pow(secondTerm, num)) / sqrt5);
+}
+console.log(fibonacciBinet(16));
+console.log(fibonacciBinet(60));
+console.log(fibonacciBinet(600));
+console.log(fibonacciBinet(6000));

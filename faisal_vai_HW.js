@@ -297,3 +297,19 @@ function sumOfDigits(num){
     return sum;
 }
 console.log("Sum of integer digits: " + sumOfDigits(1235231));
+
+// 18 Coding challenge #18: Print the first 100 prime numbers
+printPrimes(100);
+
+function printPrimes(num){
+    var n = 0;
+    var i = 2;
+
+    while(n < num){
+        if(isPrimeFermet(i)){
+            n++;
+            console.log( n + " --> " + i);
+        }
+        i++;
+    }
+}

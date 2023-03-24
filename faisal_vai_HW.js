@@ -172,7 +172,7 @@ function fibonacci(num){
         return fibonacci(num - 1) + fibonacci(num - 2);
     }
 }
-console.log(fibonacci(16));
+console.log("Fibonacci of 16 is: " + fibonacci(16));
 
 // 15 Fibonacci with Behold Binet’s Formula
 function fibonacciBinet(num) {
@@ -181,7 +181,87 @@ function fibonacciBinet(num) {
     var secondTerm = (1 - sqrt5) / 2;
     return Math.round((Math.pow(firstTerm, num) - Math.pow(secondTerm, num)) / sqrt5);
 }
-console.log(fibonacciBinet(16));
-console.log(fibonacciBinet(60));
-console.log(fibonacciBinet(600));
-console.log(fibonacciBinet(6000));
+console.log("Fibonacci using Binet formula of 16 is: " + fibonacciBinet(16));
+console.log("Fibonacci using Binet formula of 60 is: " + fibonacciBinet(60));
+console.log("Fibonacci using Binet formula of 600 is: " + fibonacciBinet(600));
+console.log("Fibonacci using Binet formula of 6000 is: " + fibonacciBinet(6000));
+
+// 16 Coding challenge #16: Create a function that will return a Boolean specifying if a number is prime
+function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+    if( num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 7 == 0 ) {
+        return false;
+    }
+    var maxIteration = Math.floor( Math.sqrt(num));
+    for (let i = 11; i <=  maxIteration; i+=10) {
+        if( num % i == 0) {
+            return false;
+        }        
+    }
+    for (let i = 13; i <=  maxIteration; i+=10) {
+        if( num % i == 0) {
+            return false;
+        }        
+    }
+    for (let i = 17; i <=  maxIteration; i+=10) {
+        if( num % i == 0) {
+            return false;
+        }        
+    }
+    for (let i = 19; i <=  maxIteration; i+=10) {
+        if( num % i == 0) {
+            return false;
+        }        
+    }
+    return true;
+}
+console.log("Is 11 prime: " + isPrime(11));
+console.log("Is 12 prime: " + isPrime(12));
+console.log("Is 13 prime: " + isPrime(13));
+console.log("Is 14 prime: " + isPrime(14));
+console.log("Is 15 prime: " + isPrime(15));
+console.log("Is 16 prime: " + isPrime(16));
+console.log("Is 17 prime: " + isPrime(17));
+console.log("Is 18 prime: " + isPrime(18));
+console.log("Is 19 prime: " + isPrime(19));
+
+console.log("Is 21 prime: " + isPrime(21));
+console.log("Is 22 prime: " + isPrime(22));
+console.log("Is 23 prime: " + isPrime(23));
+console.log("Is 24 prime: " + isPrime(24));
+console.log("Is 25 prime: " + isPrime(25));
+console.log("Is 26 prime: " + isPrime(26));
+console.log("Is 27 prime: " + isPrime(27));
+console.log("Is 28 prime: " + isPrime(28));
+console.log("Is 29 prime: " + isPrime(29));
+
+console.log("Is 31 prime: " + isPrime(31));
+console.log("Is 32 prime: " + isPrime(32));
+console.log("Is 33 prime: " + isPrime(33));
+console.log("Is 34 prime: " + isPrime(34));
+console.log("Is 35 prime: " + isPrime(35));
+console.log("Is 36 prime: " + isPrime(36));
+console.log("Is 37 prime: " + isPrime(37));
+console.log("Is 38 prime: " + isPrime(38));
+console.log("Is 39 prime: " + isPrime(39));
+
+console.log("Is 41 prime: " + isPrime(41));
+console.log("Is 42 prime: " + isPrime(42));
+console.log("Is 43 prime: " + isPrime(43));
+console.log("Is 44 prime: " + isPrime(44));
+console.log("Is 45 prime: " + isPrime(45));
+console.log("Is 46 prime: " + isPrime(46));
+console.log("Is 47 prime: " + isPrime(47));
+console.log("Is 48 prime: " + isPrime(48));
+console.log("Is 49 prime: " + isPrime(49));
+
+console.log("Is 123 prime: " + isPrime(123));
+console.log("Is 1233 prime: " + isPrime(1233));
+console.log("Is 12333 prime: " + isPrime(12333));
+console.log("Is 120 prime: " + isPrime(120));
+console.log("Is 13129 prime: " + isPrime(13129));
+console.log("Is 13127 prime: " + isPrime(13127));
+console.log("Is 131297 prime: " + isPrime(131297));
+

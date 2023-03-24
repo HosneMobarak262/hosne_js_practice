@@ -329,3 +329,14 @@ function betweenPrimes(num, startAt){
         i++;
     }
 }
+
+// Coding challenge #20: Rotate an array to the left 1 position
+var array1 = [1,2,3,4,5];
+console.log(array1);
+rotateArray(array1);
+console.log(array1);
+
+function rotateArray(array1){
+    var first = array1.shift();
+    array1.push(first);
+}

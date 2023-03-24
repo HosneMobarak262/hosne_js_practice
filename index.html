@@ -1,0 +1,147 @@
+<html>
+    <head>
+
+    </head>
+        <title>Javascript Practice</title>
+    <body>
+
+
+        <script>
+            document.write("Hello JavaScript")
+            document.write("Hello JavaScript")
+            var x = 15;
+            var X = 100;
+            var y = 54;
+            document.write(x * y + X);
+
+            var A = {
+                Name: "Hosne",
+                Age: 33,
+                City: "Dhaka"
+            }
+            document.write(A.Name);
+
+            var B = ["Dhaka", "Shirajgonj", "magura"];
+            document.write(B);
+
+            var age = 30;
+            var city = "Dhaka";
+            if(age > 18 && city == "Dhaka0") {
+                document.write("You are an adult and livel in Dhaka city");
+            } else {
+                document.write("Your are a child.");
+            }
+
+            var marks = 86;
+            switch (true) {
+                case (marks >= 90 && marks <=100):
+                    document.write("A+");
+                    break;
+                case (marks >= 80 && marks <90):
+                    document.write("A");
+                    break;
+            
+                default:
+                    document.write("Fail");
+                    break;
+            }
+
+            var i;
+            // for (i = 0; i <10; i++) {
+            //     // document.write(i);
+            //     if(i === 5 || i === 7) {
+            //         continue;
+            //     }
+            //     if (i === 9) {
+            //         break;
+            //     }
+            //     document.write(i+"<button>Submit</button> <br>")
+            // }
+
+            function addTwoNumber(a, b) {
+                // var a = 45;
+                // var b = 98;
+                document.write(a + b + "<br>");
+            }
+
+            addTwoNumber(78, 67);
+            addTwoNumber(7888, 467);
+
+            function mulTwoNumber(a, b) {
+                return a * b;
+            }
+
+            var newVal =  mulTwoNumber(56, 43.4);
+
+            document.write(newVal + "<br>");
+
+            var myPc = {
+                brand: "none",
+                screen: "24",
+                isLaptop: false,
+                ram: "32GB",
+                disk: "1TB",
+                processor: "AMD"
+            }
+
+            // document.write(myPc['brand'] + "<br>");
+            // document.write(myPc.screen + "<br>");
+
+            // var array1 = ["abc", "def", "ghi"];
+            // document.write(array1 + "<br>");
+            // document.write(array1[1] + "<br>");
+            // for(i = 0; i < array1.length; i++) {
+            //     document.write(array1[i] + "<br>");
+            // }
+            // for(var item in array1) {
+            //     document.write(array1[item] + "<br>");
+            // }
+            document.write("<br>");
+
+            // for(var item in myPc) {
+            //     document.write(item + ": " + myPc[item] + "<br>");
+            // }
+
+            var arr1 = ['A', 'B', 'C'];
+            var arr2 = ['D', 'E', 'F'];
+
+            var arr3 = arr1.concat(arr2);
+            var arr3 = arr2.concat(arr1);
+
+            document.write(arr3 + "<br>");
+
+            var Title = "learn with rabbil";
+            var TitleArray = Array.from(Title);
+            document.write(TitleArray + "<br>");
+            var numArray = [12,21,56,84,68];
+            document.write(numArray.filter(function(item){
+                return item > 50;
+            }));
+            document.write("<br>");
+            document.write(numArray.find(function(value){
+                return value < 40;
+            }));
+            document.write("<br>");
+            document.write(numArray.findIndex(function(value){
+                return value < 40;
+            }));
+            document.write("<br>");
+            numArray.forEach(function(item){
+                document.write(item + ", ");
+            });
+            document.write("<br>");
+            var result = numArray.includes(56);
+            document.write(result + "<br>");
+            var result = numArray.indexOf(56);
+            document.write(result + "<br>");
+            var result = numArray.indexOf(556 + "<br>");
+            document.write(result);
+            document.write("<br>");
+
+
+
+
+            // document.write("Hello JavaScript")
+        </script>
+    </body>
+</html>

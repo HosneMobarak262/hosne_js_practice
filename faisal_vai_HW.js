@@ -351,3 +351,17 @@ function rotateRight(array1) {
     var last = array1.pop();
     array1.unshift(last);
 }
+
+// Coding challenge #22: Reverse an array
+var array1 = [1, 2, 3, 4, 5, 6];
+console.log("array1: " + array1);
+var array2 = arrayReverse(array1);
+console.log(array2);
+
+function arrayReverse(array1) {
+    var array2 = [];
+    for(var i = array1.length - 1; i >= 0 ; i-- ) {
+        array2.push(array1[i]);
+    }
+    return array2;
+}

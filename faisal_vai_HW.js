@@ -160,3 +160,16 @@ for(var i = 2; i < 10; i++){
     fib0 = fib1;
     fib1 = fibTemp;
 }
+
+// Coding challenge #15: Create a function that will find the nth Fibonacci number using recursion
+
+function fibonacci(num){
+    if(num == 0) {
+        return 0;
+    } else if (num == 1) {
+        return 1;
+    } else {
+        return fibonacci(num - 1) + fibonacci(num - 2);
+    }
+}
+console.log(fibonacci(16));

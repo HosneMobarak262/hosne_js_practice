@@ -313,3 +313,19 @@ function printPrimes(num){
         i++;
     }
 }
+
+// 19 Coding challenge #19: Create a function that will return in an array the first "nPrimes" prime numbers greater than a particular number "startAt"
+betweenPrimes(50, 200)
+
+function betweenPrimes(num, startAt){
+    var n = 0;
+    var i = startAt;
+
+    while(n < num){
+        if(isPrimeFermet(i)){
+            n++;
+            console.log(n + " --> " + i);
+        }
+        i++;
+    }
+}

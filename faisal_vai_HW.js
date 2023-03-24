@@ -283,5 +283,17 @@ function isPrimeFermet(num) {
     }
 }
 for(var i = 1; i < 100; i++) {
-    console.log("Prime Number of " + i + " using Fermet little theorem is: " + isPrimeFermet(i))
+    console.log("Prime Number of " + i + " using Fermet's little theorem is: " + isPrimeFermet(i))
 }
+
+// 17 Coding challenge #17: Calculate the sum of digits of a positive integer number
+function sumOfDigits(num){
+    var tempNum = num;
+    var sum = 0;
+    while(tempNum != 0){
+        sum += tempNum % 10;
+        tempNum = Math.floor(tempNum / 10);
+    }
+    return sum;
+}
+console.log("Sum of integer digits: " + sumOfDigits(1235231));

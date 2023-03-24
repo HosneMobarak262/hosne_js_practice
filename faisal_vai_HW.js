@@ -365,3 +365,18 @@ function arrayReverse(array1) {
     }
     return array2;
 }
+
+// Coding challenge #23: Reverse a string
+var s1 = "Coding challenge #23: Reverse a string";
+var s2 = reverseString(s1);
+console.log(s1);
+console.log(s2);
+
+function reverseString(s1){
+    var s2 = "";
+
+    for(var i = s1.length - 1; i>=0; i--) {
+        s2 += s1[i];
+    }
+    return s2;
+}

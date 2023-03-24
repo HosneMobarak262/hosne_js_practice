@@ -265,3 +265,23 @@ console.log("Is 13129 prime: " + isPrime(13129));
 console.log("Is 13127 prime: " + isPrime(13127));
 console.log("Is 131297 prime: " + isPrime(131297));
 
+// 16 Prime number using Fermat's little theorem 
+console.log("Prime number using Fermat's little theorem.")
+function isPrimeFermet(num) {
+    if(num <= 1) {
+        return false;
+    }
+    if(num == 2) {
+        return true;
+    } else{
+        let tempPrime = Math.pow(2, num - 1) % num;
+        if(tempPrime == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+for(var i = 1; i < 100; i++) {
+    console.log("Prime Number of " + i + " using Fermet little theorem is: " + isPrimeFermet(i))
+}

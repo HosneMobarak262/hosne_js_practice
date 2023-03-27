@@ -492,3 +492,25 @@ function sumOfPrimes(num){
     }
     return tempSum;
 }
+
+// Coding challenge #29: Print the distance between the first 100 prime numbers
+
+var num = 100;
+var distancePrime = primeDistance(num);
+console.log("Prime distance is: " + distancePrime);
+
+function primeDistance(num){
+    var firstPrime = 2;
+    var lastPrime = 0;
+    var numOfPrimes = 1;
+
+    for(var i = 3; numOfPrimes <=100; i++){
+        if (isPrimeFermet(i)) {
+            numOfPrimes++;
+        }
+        if (numOfPrimes == 100) {
+            lastPrime = i;
+        }
+    }
+    return lastPrime - firstPrime;
+}

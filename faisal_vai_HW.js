@@ -531,6 +531,9 @@ function addSumString(num1, num2){
         if(i == 0){
             var digit1 = parseInt( num1.slice(-1) );
             var digit2 = parseInt( num2.slice(-1));
+
+            digit1 = isNaN(digit1) ? 0 : digit1;
+            digit2 = isNaN(digit2) ? 0 : digit2;
         } else {
             var digit1 = parseInt( num1.slice(-1 - i, -i));
             var digit2 = parseInt( num2.slice(-1 - i, -i));

@@ -514,3 +514,41 @@ function primeDistance(num){
     }
     return lastPrime - firstPrime;
 }
+
+// Coding challenge #30-a: Create a function that will add two positive numbers of indefinite size. The numbers are received as strings and the result should be also provided as string.
+
+var num1 = "78588989898989898";
+var num2 = "7878787999999898898989833";
+var sum = addSumString(num1, num2);
+console.log(sum);
+
+function addSumString(num1, num2){
+    var str = "";
+    var maxSize = Math.max(num1.length, num2.length);
+    var carry = 0;
+
+    for(var i = 0; i < maxSize; i++){
+        if(i == 0){
+            var digit1 = parseInt( num1.slice(-1) );
+            var digit2 = parseInt( num2.slice(-1));
+        } else {
+            var digit1 = parseInt( num1.slice(-1 - i, -i));
+            var digit2 = parseInt( num2.slice(-1 - i, -i));
+
+            digit1 = isNaN(digit1) ? 0 : digit1;
+            digit2 = isNaN(digit2) ? 0 : digit2;
+        }
+        var sum = digit1 + digit2 + carry;
+        var lastDigit = sum % 10;
+        carry = sum >= 10 ? 1 : 0;
+
+        str = lastDigit.toString() + str;
+
+        // console.log(digit1, digit2, carry);
+    }
+    if (carry > 0){
+        str = carry + str;
+    }
+
+    return str;
+}

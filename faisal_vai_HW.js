@@ -475,20 +475,20 @@ function getDistinctElements(array1) {
 
 // Coding challenge #28: Calculate the sum of first 100 prime numbers
 
-// var num = 100;
-// var sum = sumOfPrimes(num);
-// console.log("sum of " + num + " prime is: " + sum);
+var num = 100;
+var sum = sumOfPrimes(num);
+console.log("sum of " + num + " prime is: " + sum);
 
-// function sumOfPrimes(num){
+function sumOfPrimes(num){
 
-//     var tempSum = 2;
-//     var numOfPrimes = 1;
+    var tempSum = 2;
+    var numOfPrimes = 1;
 
-//     for(var i = 3; numOfPrimes <= 100; i+=2){
-//         if(isPrimeFermet(i)){
-//             numOfPrimes++;
-//             tempSum += i;
-//         }
-//     }
-//     return tempSum;
-// }
+    for(var i = 3; numOfPrimes <= 100; i+=2){
+        if(isPrimeFermet(i)){
+            numOfPrimes++;
+            tempSum += i;
+        }
+    }
+    return tempSum;
+}

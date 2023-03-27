@@ -163,6 +163,8 @@ for(var i = 2; i < 10; i++){
 
 // 15 Coding challenge #15: Create a function that will find the nth Fibonacci number using recursion
 
+// Solution 1
+
 function fibonacci(num){
     if(num == 0) {
         return 0;
@@ -175,6 +177,9 @@ function fibonacci(num){
 console.log("Fibonacci of 16 is: " + fibonacci(16));
 
 // 15 Fibonacci with Behold Binet’s Formula
+
+// Solution 2
+
 function fibonacciBinet(num) {
     var sqrt5 = Math.sqrt(5);
     var firstTerm = (1 + sqrt5) / 2;
@@ -187,6 +192,9 @@ console.log("Fibonacci using Binet formula of 600 is: " + fibonacciBinet(600));
 console.log("Fibonacci using Binet formula of 6000 is: " + fibonacciBinet(6000));
 
 // 16 Coding challenge #16: Create a function that will return a Boolean specifying if a number is prime
+
+// Solution 1
+
 function isPrime(num) {
     if (num < 2) {
         return false;
@@ -266,6 +274,9 @@ console.log("Is 13127 prime: " + isPrime(13127));
 console.log("Is 131297 prime: " + isPrime(131297));
 
 // 16 Prime number using Fermat's little theorem 
+
+// Solution 2
+
 console.log("Prime number using Fermat's little theorem.")
 function isPrimeFermet(num) {
     if(num <= 1) {
@@ -437,3 +448,47 @@ function mergeLeft(array1, array2){
     }
     return array3;
 }
+
+// Coding challenge #27: Create a function that will receive an array of numbers as argument and will return a new array with distinct elements
+
+var array1 = [1,2,3,4,5,6,8,9,10,11,12,13,14,15,2,3,8,4,9];
+console.log(array1);
+var array2 = getDistinctElements(array1);
+console.log(array2);
+
+function getDistinctElements(array1) {
+    var array = [];
+    for( var i = 0; i < array1.length; i++){
+    var same = false;
+        for( var j = 0; j < array.length; j++){
+            if(array1[i] == array[j]){
+                same = true;
+                break;
+            }
+        }
+        if(same == false){
+            array.push(array1[i]);
+        }
+    }
+    return array;
+}
+
+// Coding challenge #28: Calculate the sum of first 100 prime numbers
+
+// var num = 100;
+// var sum = sumOfPrimes(num);
+// console.log("sum of " + num + " prime is: " + sum);
+
+// function sumOfPrimes(num){
+
+//     var tempSum = 2;
+//     var numOfPrimes = 1;
+
+//     for(var i = 3; numOfPrimes <= 100; i+=2){
+//         if(isPrimeFermet(i)){
+//             numOfPrimes++;
+//             tempSum += i;
+//         }
+//     }
+//     return tempSum;
+// }

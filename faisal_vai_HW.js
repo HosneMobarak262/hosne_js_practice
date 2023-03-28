@@ -918,6 +918,7 @@ var array = ["Shuffle", "an", "array", "of", "strings"];
 
 console.log(shuffleArray(array));
 
+// Shuffle array implemented using Fisher–Yates shuffle algorithm
 function shuffleArray(array){
     var arrayLength = array.length;
 
@@ -934,3 +935,16 @@ function shuffleArray(array){
 function randonInteger(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// Coding challenge #50. Create a function that will receive n as argument and return an array of n unique random numbers from 1 to n.
+console.log(getRandomNumbers(50));
+
+function getRandomNumbers(num){
+    var array = [];
+
+    for(var i = 1; i <= num; i++){
+        array.push(i);
+    }
+    return shuffleArray(array);
+}
+

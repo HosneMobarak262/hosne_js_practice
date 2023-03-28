@@ -758,3 +758,10 @@ console.log(getDistance(100, 100, 400, 300));
 function getDistance(x1, y1, x2, y2){
     return Math.sqrt((x1 - x2)**2 + (y1 -y2)**2);
 }
+
+// Coding challenge #42. Create a function that will return a Boolean value indicating if two circles defined by center coordinates and radius are intersecting
+console.log(collisionCircleCircle(200, 200, 100, 300, 300, 50));
+
+function collisionCircleCircle(c1x,c1y,c1r, c2x, c2y, c2r){
+    return getDistance(c1x, c1y, c2x,c2y) <= (c2r + c1r);
+}

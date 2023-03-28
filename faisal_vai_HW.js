@@ -948,3 +948,24 @@ function getRandomNumbers(num){
     return shuffleArray(array);
 }
 
+// Coding challenge #51. Find the frequency of characters inside a string. Return the result as an array of objects. Each object has 2 fields: character and number of occurrences.
+
+var array = getCharFrequency("Find the frequency of characters inside a string");
+console.log(JSON.stringify(array));
+
+function getCharFrequency(text){
+    var arr = [];
+
+    for (var char of text){
+        updateFrequency(arr, char);
+    }
+    return arr;
+}
+function updateFrequency(arr, char){
+    for(var item of arr){
+        if(item.char === char){
+            item.count++;
+        }
+    }
+    arr.push({char: char, count: 1});
+}

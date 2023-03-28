@@ -912,3 +912,25 @@ function getWords(text){
 
     return array;
 }
+
+// Coding challenge #49. Shuffle an array of strings
+var array = ["Shuffle", "an", "array", "of", "strings"];
+
+console.log(shuffleArray(array));
+
+function shuffleArray(array){
+    var arrayLength = array.length;
+
+    for (var i = arrayLength - 1; i > 0; i--){
+        var j = randonInteger(0, i - 1);
+
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array
+}
+
+function randonInteger(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}

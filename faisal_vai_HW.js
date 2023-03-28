@@ -765,3 +765,26 @@ console.log(collisionCircleCircle(200, 200, 100, 300, 300, 50));
 function collisionCircleCircle(c1x,c1y,c1r, c2x, c2y, c2r){
     return getDistance(c1x, c1y, c2x,c2y) <= (c2r + c1r);
 }
+
+// Coding challenge 43. Create a function that will receive a bi-dimensional array as argument and a number and will extract as a unidimensional array the column specified by the number
+var ar = [["John", 120],
+["Jane", 115],
+["Thomas", 123],
+["Mel", 112],
+["Charley", 122]
+];
+
+var numbers = extractCol(ar, 0);
+console.log(numbers);
+var numbers = extractCol(ar, 1);
+console.log(numbers);
+
+function extractCol(array, colNo) {
+    var arrayCol = [];
+
+    for (var i = 0; i < array.length; i++) {
+        arrayCol.push(array[i][colNo]);
+    }
+
+    return arrayCol;
+}

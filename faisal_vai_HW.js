@@ -692,3 +692,36 @@ console.log(codesToString([73, 32, 108, 105, 107, 101, 32, 74, 97, 118, 97, 83, 
 function codesToString(codes){
     return String.fromCharCode(...codes);
 }
+
+var text = "I LOVE JAVASCRIPT";
+var textEnc = encrypt(text, 13);
+var textDec = decrypt(textEnc, 13);
+
+console.log(text);
+console.log(textEnc);
+console.log(textDec);
+
+function encrypt(message, key){
+    var encryptedMessage = "";
+
+    for (var i = 0; i < message.length; i++){
+        var code = message.charCodeAt(i);
+        // console.log(code);
+        if(code >= 65 && code <= 65 + 26 - 1){
+            code -= 65;
+            code = mod(code + key, 26);
+            code += 65;
+        }
+        encryptedMessage += String.fromCharCode(code);
+    }
+    return encryptedMessage ;
+}
+function mod(n, p) {
+    if (n < 0)
+        n = p - Math.abs(n) % p;
+
+    return n % p;
+}
+function decrypt(message, key){
+    return encrypt(message, key *= -1);
+}

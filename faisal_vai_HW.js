@@ -586,3 +586,22 @@ console.log(countWords("JavaScript!!!   "));
 console.log(countWords("     JavaScript"));
 console.log(countWords("    JavaScript is cool      "));
 console.log(countWords("I like to learn JavaScript with Lead Educare"));
+
+// Coding challenge #32. Create a function that will capitalize the first letter of each word in a text
+
+console.log(captializeWords("Create a function that will capitalize the first letter of each word in a text in a text in a text"));
+
+function captializeWords(text){
+    text2 = "";
+    
+    for (var i = 0; i < text.length; i++){
+        currentChar = text[i];
+        previousChar = i > 0 ? text[i - 1] : " ";
+
+        if(!isSeperator(currentChar) && isSeperator(previousChar)){
+            currentChar = currentChar.toUpperCase();
+        }
+        text2 += currentChar;
+    }
+    return text2;
+}

@@ -788,3 +788,10 @@ function extractCol(array, colNo) {
 
     return arrayCol;
 }
+
+// Coding challenge #44. Create a function that will convert a string containing a binary number into a number
+console.log(binaryToNumber("111110010101111"));
+
+function binaryToNumber(bin){
+    return parseInt(bin, 2);
+}

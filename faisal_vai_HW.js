@@ -795,3 +795,20 @@ console.log(binaryToNumber("111110010101111"));
 function binaryToNumber(bin){
     return parseInt(bin, 2);
 }
+
+// Coding challenge #45. Create a function to calculate the sum of all the numbers in a jagged array (array contains numbers or other arrays of numbers on an unlimited number of levels)
+var array = [1, 2, [15, [23], [5, 12, 900]], [100]];
+
+console.log(sumArray(array));
+
+function sumArray(array){
+    var sum = 0;
+
+    for(var item of array){
+        if( Array.isArray(item)){
+            item = sumArray(item);
+        }
+        sum += item;
+    }
+    return sum;
+}

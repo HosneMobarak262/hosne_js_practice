@@ -812,3 +812,25 @@ function sumArray(array){
     }
     return sum;
 }
+
+// Coding challenge #46-a. Find the maximum number in a jagged array of numbers or array of numbers
+// Solution 1
+
+var array = [2, 4, 10, [12, 4, [100, 99], 4], [3, 2, 99], 0];
+
+var max = findMax(array);
+console.log("Max  = ", max);
+
+function findMax(array){
+    var max = -Infinity;
+
+    for(var item of array){
+        if(Array.isArray(item)){
+            item = findMax(item);
+        }
+        if(item > max){
+            max = item;
+        }
+    }
+    return max
+}

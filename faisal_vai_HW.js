@@ -555,3 +555,34 @@ function addSumString(num1, num2){
 
     return str;
 }
+
+// Coding challenge #31a. Create a function that will return the number of words in a text
+
+function countWords(text) {
+    var wasSeparator = true;
+    var words = 0;
+
+    for(var c of text){
+        // console.log(c);
+        if (isSeperator(c)) {
+            wasSeparator = true;
+            continue;
+        }
+        if (wasSeparator) {
+            words++;
+            wasSeparator = false;
+        }
+    }
+    return words;
+}
+function isSeperator(c){
+    var seperators = [" ", "\t", "\n", "\r", ",", ";", ".", "!", "?"];
+    return seperators.includes(c);
+}
+
+console.log(countWords(""));
+console.log(countWords("            "));
+console.log(countWords("JavaScript!!!   "));
+console.log(countWords("     JavaScript"));
+console.log(countWords("    JavaScript is cool      "));
+console.log(countWords("I like to learn JavaScript with Lead Educare"));

@@ -834,3 +834,22 @@ function findMax(array){
     }
     return max
 }
+
+// Coding challenge #47. Deep copy a jagged array with numbers or other arrays in a new array
+var array1 = [2, 4, 10, [12, 4, [100, 99], 4], [3, 2, 99], 0];
+var array2 = copyArray(array1);
+
+console.log(array1);
+console.log(array2);
+
+function copyArray(array1){
+    var array2 = [];
+
+    for (var item of array1){
+        if(Array.isArray(item)){
+            item = copyArray(item);
+        }
+        array2.push(item);
+    }
+    return array2;
+}

@@ -853,3 +853,62 @@ function copyArray(array1){
     }
     return array2;
 }
+
+// Coding challenge #48. Create a function to return the longest word(s) in a string
+
+var text = "Create a function to return the longest word(s) in a sentance.";
+
+console.log(getLongestWords(text));
+
+function getLongestWords(text){
+    var words = getWords(text);
+
+    var wordsLength = words.length;
+
+    var maxSize = 0;
+    var maxPositions = [];
+
+    for(var i = 0; i < wordsLength; i++){
+        var currentWordSize = words[i].length;
+
+        if(currentWordSize > maxSize){
+            maxSize = currentWordSize;
+            maxPositions = [i];
+        } else if(currentWordSize === maxSize){
+            maxPositions.push(i);
+        }
+    }
+    return getElements(words, maxPositions);
+}
+
+function getElements(array, arrayPsitions){
+    var arrayNew = [];
+
+    for(var item of arrayPsitions){
+        arrayNew.push(array[item]);
+    }
+    return arrayNew;
+}
+
+function getWords(text){
+    let startWord = -1;
+    let textLength = text.length;
+    let array = [];
+
+    for (let i = 0; i <= textLength; i++) {
+        let c = i < textLength ? text[i] : " ";
+
+        if (!isSeperator(c) && startWord < 0) {
+            startWord = i;
+        }
+
+        if (isSeperator(c) && startWord >= 0) {
+            let word = text.substring(startWord, i);
+            array.push(word);
+
+            startWord = -1;
+        }
+    }
+
+    return array;
+}

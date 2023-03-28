@@ -672,3 +672,16 @@ function getChars(s) {
     return Array.from(s);
 }
 
+// Coding challenge #37. Create a function that will convert a string in an array containing the ASCII codes of each character
+console.log(getCharCodes("I like JavaScript"));
+
+function getCharCodes(str) {
+    var array = [];
+
+    for (var i = 0; i < str.length; i++) {
+        var code = str.charCodeAt(i);
+        array.push(code);
+    }
+
+    return array;
+}

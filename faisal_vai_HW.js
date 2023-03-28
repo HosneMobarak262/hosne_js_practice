@@ -693,6 +693,7 @@ function codesToString(codes){
     return String.fromCharCode(...codes);
 }
 
+// Coding challenge #39. Implement the Caesar cypher
 var text = "I LOVE JAVASCRIPT";
 var textEnc = encrypt(text, 13);
 var textDec = decrypt(textEnc, 13);

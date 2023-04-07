@@ -752,6 +752,7 @@ function bubbleSort(ar) {
     }
 }
 
+
 // Coding challenge #41. Create a function to calculate the distance between two points defined by their x, y coordinates
 console.log(getDistance(100, 100, 400, 300));
 
@@ -969,3 +970,50 @@ function updateFrequency(arr, char){
     }
     arr.push({char: char, count: 1});
 }
+
+
+// 40: CUBE Sort algorithm
+
+// Function to sort the cubes of array
+function sortArr(arr, n)
+{
+    // Sort the array
+    arr.sort( function( a , b){
+        var x = Math.pow(a,3);
+        var y = Math.pow(b,3);
+        if(x > y) return 1;
+        if(x < y) return -1;
+        return 0;
+    });
+ 
+    return arr;
+}
+
+// Function to sort the normal array
+function normalSort(arr){
+    arr.sort( function( a, b){
+        return a - b;
+    })
+    return arr;
+}
+
+// Driver program to test above
+// var arr = [ 4, -1, 0, -5, 6,89,54,10,-9,-74, 23 ];
+var arr = [];
+for (var i = 0; i < 200; i++){
+    arr.push(Math.floor(Math.random() * 100));
+}
+console.log(arr);
+let startTime = performance.now();
+var n = arr.length;
+let sortedArr = sortArr(arr, n);
+let endTime = performance.now();
+console.log(sortedArr);
+console.log(`Execution time for cube sort: ${endTime - startTime}`);
+
+// normal sort
+startTime = performance.now();
+sortedArr = normalSort(arr);
+endTime = performance.now();
+console.log(sortedArr);
+console.log(`Execution time for Normal sort: ${endTime - startTime}`);

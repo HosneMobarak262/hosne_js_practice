@@ -107,5 +107,33 @@ function printPairs(arr, sum){
         hashArr.push(item);
     });
 }
-// I wasn't expecting this code to work but somehow it is working
+// I wasn't expecting this code I wrote by myself to work but somehow it is working
 printPairs(arr, target);
+
+// Problem 11: food ordering app
+const menuItems = [
+    {name: "dal", price: 23.5},
+    {name: "vaat", price: 33.1},
+    {name: "maas", price: 50},
+    {name: "shobji", price: 15}
+]
+menuItems.sort((a, b) => a.price - b.price);
+console.log(menuItems);
+
+// Problem 12: social media app
+const userPosts = [
+    "just went for a #run #fitness",
+    "enjoying the #weekend with #friends",
+    "can't wait for the #vacation #beach #run",
+];
+const hashTagArray = new Set();
+
+userPosts.forEach(post => {
+    let words = post.split(" ");
+    words.forEach(word => {
+        if(word.startsWith("#")){
+            hashTagArray.add(word.slice(1));
+        }
+    });
+});
+console.log(hashTagArray);

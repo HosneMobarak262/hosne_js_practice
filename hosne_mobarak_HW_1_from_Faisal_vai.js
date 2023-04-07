@@ -962,13 +962,13 @@ function getCharFrequency(text){
     }
     return arr;
 }
-function updateFrequency(arr, char){
-    for(var item of arr){
+function updateFrequency(arr1, char){
+    for(var item of arr1){
         if(item.char === char){
             item.count++;
         }
     }
-    arr.push({char: char, count: 1});
+    arr1.push({char: char, count: 1});
 }
 
 

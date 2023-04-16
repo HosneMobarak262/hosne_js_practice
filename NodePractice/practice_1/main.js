@@ -1,21 +1,19 @@
 var http=require('http');
+var URL=require('url');
 
 var server = http.createServer(function (req, res){
-    if(req.url=="/"){
-        res.writeHead(200, {'Content-Type':'text/html'})
-        res.write('<h1>This is Home Page.</h1>')
-        res.end()
-    }
-    else if (req.url=="/about"){
-        res.writeHead(200, {'Content-Type':'text/html'})
-        res.write('<h1>This is About Page.</h1>')
-        res.end()
-    }
-    else if (req.url=="/contact"){
-        res.writeHead(200, {'Content-Type':'text/html'})
-        res.write('<h1>This is Contact Page.</h1>')
-        res.end()
-    }
+    var myUrl = "https://rabbil.com/courseDetails?id=632d7ebfbe4399c3d8ca0590";
+
+    var myUrlObj = URL.parse(myUrl,true);
+
+    var myHostName = myUrlObj.host;
+    var myPathName = myUrlObj.pathname;
+    var mySearchName = myUrlObj.search;
+
+    res.writeHead(200, {'Content-Type':'text/html'});
+    res.write(myHostName);
+    res.end();
+
 });
 
 server.listen(5050);

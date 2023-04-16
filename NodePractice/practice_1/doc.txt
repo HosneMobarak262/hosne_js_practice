@@ -1,2 +1,13 @@
+to run application
+    node main.js
+
 to initialize package.json
-npm init --y
+    npm init --y
+
+writh this in sctipt package.json
+    "start": "node main.js"
+
+    then execute
+    npm start -- to start application
+
+

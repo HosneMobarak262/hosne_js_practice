@@ -1,0 +1,2 @@
+to initialize package.json
+npm init --y

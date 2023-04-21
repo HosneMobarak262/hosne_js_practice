@@ -424,3 +424,24 @@ const productInDoller = products2.map(product => ({
 }));
 
 console.log(`Currency convert: ${JSON.stringify(productInDoller)}`);
+
+// problem 20-2: currency convert to euro
+
+const numbers = [1,2,3,4,5,6,7,8,9];
+
+const result = numbers.map((number, index) => {
+    const transformedNumber = number * index ** 2;
+
+    if(transformedNumber % 2 === 1 || transformedNumber < 10){
+        return null;
+    }
+
+    return {
+        originalNumber: number,
+        transformedNumber,
+        index
+    };
+
+}).filter((item) => item !== null);
+
+console.log(`Transformed numbers: ${JSON.stringify(result)}`)

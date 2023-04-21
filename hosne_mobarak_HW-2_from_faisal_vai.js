@@ -375,3 +375,16 @@ const products = [
 products.sort((a, b) => a.price - b.price);
 
 console.log(products);
+
+// problem 19: return objects greater than 18 years old
+
+const people = [
+    { name: "Hosne Mobarak", age: 34},
+    { name: "Eng. Shimul", age: 36},
+    { name: "Senija", age: 5},
+    { name: "Afra", age: 3},
+]
+
+const adults = people.filter(item => item.age >= 18);
+
+console.log(`Adults: ${JSON.stringify(adults)}`);

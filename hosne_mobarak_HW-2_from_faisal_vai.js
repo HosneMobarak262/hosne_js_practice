@@ -388,3 +388,21 @@ const people = [
 const adults = people.filter(item => item.age >= 18);
 
 console.log(`Adults: ${JSON.stringify(adults)}`);
+
+// problem 19-2
+
+const books = [
+    { title: "The Great gatsby", author: "author 1"},
+    { title: "To kill a Mocking bird", author: "author 2"},
+    { title: "The 1984", author: "author 3"},
+    { title: "Pride and Prejudice", author: "author 4"},
+    { title: "The Catcher in the eye", author: "author 5"},
+];
+
+const searchBooks = (query) => {
+    const results = books.filter((book) =>
+        book.title.toLowerCase().includes(query.toLowerCase()));
+    console.log(`Results: ${JSON.stringify(results)}`);
+};
+
+searchBooks("tHe");

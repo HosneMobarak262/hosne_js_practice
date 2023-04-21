@@ -363,3 +363,15 @@ function addInventory(name, quantity){
 deductInventory("dough", 5);
 addInventory("potato", 10);
 addInventory("potato1223", 100);
+
+// Problem 18: given an array of objects representing products, sort the products by price form lowest to highest
+
+const products = [
+    { name: "balish", price: 450},
+    { name: "blancket", price: 2500},
+    { name: "sock", price: 110},
+];
+
+products.sort((a, b) => a.price - b.price);
+
+console.log(products);

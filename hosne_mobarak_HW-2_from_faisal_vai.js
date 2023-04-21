@@ -288,7 +288,7 @@ console.log(posts);
 
 // Problem 16: find two numbers that add up to a certain value
 
-const purchases = [1,2,3,4,5,6,1,7,8,9,6,5,8,9];
+const purchases = [1,2,3,4,5,6,1,7,8,9,6,5,8,9,8];
 let maxSum = Math.max(...purchases);
 let minSum = Math.min(...purchases);
 
@@ -329,3 +329,37 @@ for (var i = minSum; i <= maxSum; i++ ){
 console.log(`Largest target: ${targetLargest}`);
 console.log(`Largest count: ${targetCount}`);
 
+// Problem 17: restaurant inventory
+
+const ingredients = [
+    { name: "dough", inventory: 12},
+    { name: "tomato sauce", inventory: 35},
+    { name: "potato", inventory: 26},
+    { name: "bread", inventory: 40},
+];
+
+// function to decrease inventery
+function deductInventory(name, quantity){
+    try {
+        const ingredient = ingredients.find((i) => i.name === name);
+        ingredient.inventory -= quantity;
+        console.log(`Inventory updated for ${name} : ${ingredient.inventory} remaining`);
+    } catch (error) {
+        console.log(`Ingredient ${name} not found`);
+    }
+}
+
+// function to increase inventory
+function addInventory(name, quantity){
+    try{
+        const ingredient = ingredients.find((i) => i.name === name);
+        ingredient.inventory += quantity;
+        console.log(`Inventory updated for ${name} : ${ingredient.inventory} remaining`);
+    } catch (error){
+        console.log(`Ingredient ${name} not found`);
+    }
+}
+
+deductInventory("dough", 5);
+addInventory("potato", 10);
+addInventory("potato1223", 100);

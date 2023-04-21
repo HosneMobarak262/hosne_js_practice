@@ -406,3 +406,21 @@ const searchBooks = (query) => {
 };
 
 searchBooks("tHe");
+
+// problem 20: currency convert to euro
+
+const products2 = [
+    { name: "samsung a20", price: 15000},
+    { name: "iphone", price: 40000},
+    { name: "macbook", price: 200000},
+];
+
+const currencyExchangeRateDoller = 107; // doller rate
+
+const productInDoller = products2.map(product => ({
+    name: product.name,
+    price: product.price / currencyExchangeRateDoller,
+    formattedPrice: `$ ${(product.price / currencyExchangeRateDoller).toFixed(2)}`
+}));
+
+console.log(`Currency convert: ${JSON.stringify(productInDoller)}`);

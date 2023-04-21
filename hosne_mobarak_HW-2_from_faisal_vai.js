@@ -444,4 +444,4 @@ const result = numbers.map((number, index) => {
 
 }).filter((item) => item !== null);
 
-console.log(`Transformed numbers: ${JSON.stringify(result)}`)
+console.log(`Transformed numbers: ${JSON.stringify(result)}`);

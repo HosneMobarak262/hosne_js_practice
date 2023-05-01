@@ -4,7 +4,7 @@ var http = require('http');
 
 var server = http.createServer(function (req, res){
     if(req.url=="/"){
-    //    Async file write
+    //    Async file rename
 
         fs.rename('demo.txt','demo2.txt',function (error){
            if(error){

@@ -4,7 +4,7 @@ var http = require('http');
 
 var server = http.createServer(function (req, res){
     if(req.url=="/"){
-    //    Async file write Sync
+    //    Sync file write Sync
 
         let error   =   fs.writeFileSync('sync.txt','This is synchronous File write');
 

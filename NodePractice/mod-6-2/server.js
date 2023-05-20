@@ -9,8 +9,12 @@ const app = express();
 //     res.send("<h1>hello express</h1>");
 // });
 
-app.all("/", (req, res) =>{
-    res.send("<h1>hello express js home path</h1>");
+// app.all("/", (req, res) =>{
+//     res.send("<h1>hello express js home path</h1>");
+// });
+
+app.all("/ostad", (req, res) =>{
+    res.send("<h1>hello express js Ostad path</h1>");
 });
 
 app.listen(port, ()=>{

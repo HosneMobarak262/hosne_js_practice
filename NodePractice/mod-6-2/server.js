@@ -5,6 +5,9 @@ const port = 5050;
 const app = express();
 // console.log(app);
 
+app.use(express.static('public'));
+
+
 // app.all("*", (req, res) =>{
 //     res.send("<h1>hello express</h1>");
 // });

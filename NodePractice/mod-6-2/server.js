@@ -22,7 +22,11 @@ app.get("/", (req, res)=>{
 });
 
 app.post("/", (req, res)=>{
-    res.send("<h1>Hello express js post page</h1>")
+    // res.send("<h1>Hello express js post page</h1>");
+    res.json({
+        "name": "Hosne Mobarak",
+        "city": "Dhaka"
+    });
 });
 
 app.put("/", (req, res) =>{

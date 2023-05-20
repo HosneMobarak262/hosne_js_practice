@@ -1,5 +1,6 @@
 const express = require('express');
 // console.log(express);
+const path = require('path');
 const port = 5050;
 
 const app = express();
@@ -21,7 +22,8 @@ app.use(express.static('public'));
 // });
 
 app.get("/", (req, res)=>{
-    res.send("<h1>Hello express js get page</h1>");
+    // res.send("<h1>Hello express js get page</h1>");
+    res.sendFile(path.join(__dirname + "/public/node.html"));
 });
 
 app.post("/", (req, res)=>{
